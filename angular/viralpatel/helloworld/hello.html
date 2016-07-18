@@ -1,0 +1,25 @@
+<!--start the app-->
+<html ng-app> 
+    <head>
+      <title>Hello World, AngularJS - ViralPatel.net</title>
+      <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+      <link rel="stylesheet" href="../../css/font-awesome.css" />
+
+      <script src="../../js/angular.min.js"></script>
+      <script src="../../js/angular-route.js"></script>
+      
+    </head>
+    <body>
+        
+        Write some text in the textbox:
+        <!--ng-model basic-->
+        <input type="text" ng-model="sometext"/>
+        
+        <!--ng-show-->
+        <h1 ng-show="sometext">Hello {{sometext}}</h1>
+        
+        <!--filters-->
+        <h4>Uppercase: {{ sometext | uppercase }}</h4>
+        <h4>Lowercase: {{ sometext | lowercase }}</h4>
+    </body>
+</html>

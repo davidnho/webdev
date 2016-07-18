@@ -1,0 +1,2 @@
+source : http://www.stepblogging.com/php-login-script-using-pdo/
+db: localhost : dblogin - tbl_users

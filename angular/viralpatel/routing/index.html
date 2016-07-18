@@ -1,0 +1,28 @@
+<html  ng-app="sampleApp">
+    <head>
+        <title>AngularJS Routing example</title>
+        <script src="../../../js/angular.min.js"></script>
+        <script src="../../../js/angular-route.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/font-awesome.css" />
+    </head>
+
+    <body >
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="nav">
+                        <li><a href="#AddNewOrder"> Add New Order </a></li>
+                        <li><a href="#ShowOrders"> Show Order </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

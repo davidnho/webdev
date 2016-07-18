@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script type="text/javascript" src="jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $("document").ready(function(){
+                $("button").click(function(){
+                    $("p").hide(function(){
+                       alert("I was clicked!");      
+                    });
+                });
+            });
+        </script>
+        <button type="button">Hide the paragraph below: </button>
+        <p>This will be hidden</p>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+--
+-- Database: `signinpdo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members`
+--
+
+CREATE TABLE IF NOT EXISTS `members` (
+  `MemId` int(5) NOT NULL AUTO_INCREMENT,
+  `UserName` varchar(25) NOT NULL,
+  `Password` varchar(20) NOT NULL,
+  `Type` varchar(20) NOT NULL,
+  `Region` varchar(10) NOT NULL,
+  PRIMARY KEY (`MemId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`MemId`, `UserName`, `Password`, `Type`, `Region`) VALUES
+(1, 'furqan.aziz', '654321', 'ACTAdmin', 'HQ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ttmain`
+--
+
+CREATE TABLE IF NOT EXISTS `ttmain` (
+  `SrNo` int(11) NOT NULL AUTO_INCREMENT,
+  `TTDescription` varchar(300) NOT NULL,
+  `TTCity` varchar(50) NOT NULL,
+  `TTEntryDate` date NOT NULL,
+  `TTEntryTime` time NOT NULL,
+  `TTEntryBy` varchar(25) NOT NULL,
+  `TTClosedDate` date NOT NULL,
+  `TTClosedTime` time NOT NULL,
+  `TTClosedBy` varchar(25) NOT NULL,
+  `Status` varchar(10) NOT NULL DEFAULT 'Open',
+  PRIMARY KEY (`SrNo`),
+  UNIQUE KEY `SrNo` (`SrNo`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1016 ;
+
+--
+-- Dumping data for table `ttmain`
+--
+
+INSERT INTO `ttmain` (`SrNo`, `TTDescription`, `TTCity`, `TTEntryDate`, `TTEntryTime`, `TTEntryBy`, `TTClosedDate`, `TTClosedTime`, `TTClosedBy`, `Status`) VALUES
+(1000, 'DG Faulty', 'New Yark', '2013-11-21', '13:01:00', 'furqan.aziz', '2013-11-21', '13:02:00', 'furqan.aziz', 'Closed'),
+(1001, 'DG Faulty', 'New Yark', '2013-11-20', '13:01:00', 'furqan.aziz', '2013-11-21', '13:56:07', 'furqan.aziz', 'Closed'),
+(1002, 'DG Faulty', 'New Yark', '2013-11-19', '13:01:00', 'furqan.aziz', '0000-00-00', '00:00:00', '', 'Open'),
+(1004, 'DG Faulty', 'New Yark', '2013-11-19', '13:01:00', 'furqan.aziz', '2013-11-20', '13:01:00', 'furqan.aziz', 'Closed'),
+(1005, 'DG Faulty', 'New Yark', '2013-11-18', '13:01:00', 'furqan.aziz', '0000-00-21', '13:01:00', 'furqan.aziz', 'Closed'),
+(1006, 'DG Faulty', 'New Yark', '2013-11-18', '13:01:00', 'furqan.aziz', '0000-00-00', '00:00:00', '', 'Open'),
+(1007, 'DG Faulty', 'New Yark', '2013-11-17', '13:01:00', 'furqan.aziz', '0000-00-00', '00:00:00', '', 'Open'),
+(1008, 'AC Faulty', 'New Yark', '2013-11-13', '13:01:00', 'furqan.aziz', '2013-11-19', '13:01:00', 'furqan.aziz', 'Closed'),
+(1009, 'Power Issue', 'New Yark', '2013-11-21', '14:01:00', 'furqan.aziz', '2013-11-21', '13:58:15', 'furqan.aziz', 'Closed'),
+(1010, 'DG have some leakage issue', 'New Yark', '2013-11-21', '11:07:58', 'furqan.aziz', '0000-00-00', '00:00:00', '', 'Open'),
+(1011, 'Wapda Meter Issue', 'New Yark', '2013-11-20', '11:07:58', 'furqan.aziz', '0000-00-00', '00:00:00', '', 'Open'),
+(1012, 'Issue of Supply of BTS', 'New Yark', '2013-11-21', '14:26:07', 'furqan.aziz', '0000-00-00', '00:00:00', '', 'Open'),
+(1013, 'Wapda meter is not working properly', 'New Yark', '2013-11-21', '14:26:40', 'furqan.aziz', '0000-00-00', '00:00:00', '', 'Open'),
+(1014, 'DD Issue', 'New Yark', '2013-11-21', '16:24:54', 'furqan.aziz', '2013-11-21', '16:29:23', 'furqan.aziz', 'Closed'),
+(1015, 'DG Issue Bts issue', 'New Yark', '2013-11-21', '16:50:35', 'furqan.aziz', '2013-11-21', '16:56:53', 'furqan.aziz', 'Closed');

@@ -1,0 +1,1 @@
+[08-Oct-2015 07:49:09 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/ubuntu/workspace/corephp/classes/myclasses.php on line 14

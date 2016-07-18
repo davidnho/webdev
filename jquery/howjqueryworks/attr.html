@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Review</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#a1").attr("href","http://www.w3schools.com");
+                $("#t1").val($("#a1").attr("href"));
+                $("#s1").html($("#a1").html());
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Click Me</button>
+    <p><a id="a1" href="">This text</a></p>
+    <p><input id="t1" type="text"></p>
+    <p><span id="s1"></span></p>
+
+</body>
+</html>

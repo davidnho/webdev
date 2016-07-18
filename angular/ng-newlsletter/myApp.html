@@ -1,0 +1,30 @@
+<html ng-app="myApp">
+    <head>
+        <script type="text/javascript" src="../../js/angular.min.js"></script>
+        <script src="myApp.js"></script>
+    </head>
+    <body>
+        <div>
+            <!--scope-->
+            <h2>{{name}}</h2>
+        </div>
+        <p>Controller Example</p>
+        <div ng-controller="MyController">
+            {{ person.name }}
+        </div>
+        <p>Inheritance example</p>
+        <div ng-controller="ParentController">
+            <div ng-controller="ChildController">
+                <input type="text" ng-model="person.name" placeholder="Name"></input>
+                <a ng-click="sayHello()">Say Hello</a>
+            </div>
+            {{ person }}
+        </div>
+        <p>An audio app</p>
+        <div ng-controller="PlayerController">
+          <button ng-click="play()" class="button" ng-show="!playing">Play</button>
+          <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
+          Playing audio: <b>{{ playing }}</b>
+        </div>
+    </body>
+</html>

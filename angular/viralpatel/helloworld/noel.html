@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script type="text/javascript" src="../../js/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app id="ng-app">
+            <h2>Type anything on the text box:</h2>
+            <input type=text ng-model="mymsg"></br>
+            <p ng-show="mymsg">This is your message:</p>
+            <h3>{{mymsg | uppercase}}</h3>
+        </div>
+    </body>
+</html>

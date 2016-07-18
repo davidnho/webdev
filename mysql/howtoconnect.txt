@@ -1,0 +1,40 @@
+source: https://docs.c9.io/docs/setting-up-mysql
+
+<?php
+    // A simple PHP script demonstrating how to connect to MySQL.
+    // Press the 'Run' button on the top to start the web server,
+    // then click the URL that is emitted to the Output tab of the console.
+
+    $servername = getenv('IP');
+    $username = getenv('C9_USER');
+    $password = "";
+    $database = "c9";
+    $dbport = 3306;
+
+    // Create connection
+    $db = new mysqli($servername, $username, $password, $database, $dbport);
+
+    // Check connection
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
+    } 
+    echo "Connected successfully (".$db->host_info.")";
+?>
+
+source : http://www.kodingmadesimple.com/2015/01/convert-mysql-to-json-using-php.html
+
+CREATE TABLE IF NOT EXISTS `tbl_employee` (
+  `employee_id` int(4) NOT NULL AUTO_INCREMENT,
+  `employee_name` varchar(60) NOT NULL,
+  `designation` varchar(30) NOT NULL,
+  `hired_date` date NOT NULL,
+  `salary` int(10) NOT NULL,
+  PRIMARY KEY (`employee_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+INSERT INTO `tbl_employee` (`employee_id`, `employee_name`, `designation`, `hired_date`, `salary`) VALUES
+(1, 'Steve', 'VP', '2013-08-01', 60000),
+(2, 'Robert', 'Executive', '2014-10-09', 20000),
+(3, 'Luci', 'Manager', '2013-08-20', 40000),
+(4, 'Joe', 'Executive', '2013-06-01', 25000),
+(5, 'Julia', 'Trainee', '2014-10-01', 10000);
