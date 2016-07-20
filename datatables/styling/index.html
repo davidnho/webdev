@@ -9,9 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.12/sorting/natural.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.12/sorting/time.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        $('#datatable').dataTable();
+        $('#datatable').dataTable({
+            columnDefs: 
+            [
+            { "type": "natural","targets": [1]}
+            ],
+           
     });
     </script>
     <style>
@@ -50,7 +57,7 @@
                     <td>System Architect</td>
                     <td>Edinburgh</td>
                     <td>61</td>
-                    <td>2011/04/25</td>
+                    <td>12:00 am</td>
                     <td>$320,800</td>
                 </tr>
                 <tr>
@@ -58,7 +65,7 @@
                     <td>Accountant</td>
                     <td>Tokyo</td>
                     <td>63</td>
-                    <td>2011/07/25</td>
+                    <td>6:00 pm</td>
                     <td>$170,750</td>
                 </tr>
                 <tr>
@@ -79,7 +86,7 @@
                 </tr>
                 <tr>
                     <td>Airi Satou</td>
-                    <td>Accountant</td>
+                    <td>Accountant1</td>
                     <td>Tokyo</td>
                     <td>33</td>
                     <td>2008/11/28</td>
@@ -95,7 +102,7 @@
                 </tr>
                 <tr>
                     <td>Herrod Chandler</td>
-                    <td>Sales Assistant</td>
+                    <td>Accountant13</td>
                     <td>San Francisco</td>
                     <td>59</td>
                     <td>2012/08/06</td>
@@ -103,7 +110,7 @@
                 </tr>
                 <tr>
                     <td>Rhona Davidson</td>
-                    <td>Integration Specialist</td>
+                    <td>Accountant2</td>
                     <td>Tokyo</td>
                     <td>55</td>
                     <td>2010/10/14</td>
