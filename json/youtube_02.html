@@ -1,0 +1,57 @@
+<!-- https://www.youtube.com/watch?v=wbB3lVyUvAM -->
+<html>
+<head>
+<style type="text/css">
+.container{
+	margin-top: 10px;
+}
+</style>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script type="text/javascript">
+
+function ajax_get_json(){
+    
+    var hr = new XMLHttpRequest();
+    hr.open("GET", "mylist.json", true);
+    hr.setRequestHeader("Content-type", "application/json",true);
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    // var return_data = hr.responseText;
+			var data = JSON.parse(hr.responseText);
+			var results = document.getElementById("results");
+			
+			/* 
+
+			// OLD EXAMPLE
+			// html file
+			results.innerHTML = data.user + " is " + data.age + " and he lives in " + data.country + ".";
+
+			//json file file :
+			{"user":"John","age":22,"country":"United States"}
+			
+			*/
+
+			results.innerHTML = data.u2.user + " is " + data.u2.age + " and he lives in " + data.u2.country 
+			document.write("<hr>");
+			for (var obj in data) {
+				results.innerHTML += "" //continue tomorrow
+			}
+	    }
+    }
+    
+    hr.send(null); 
+    results.innerHTML = "requesting...";
+}
+
+</script>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron"><h2>JSON</h2></div>
+<div id="results">
+<script type="text/javascript">ajax_get_json(); </script>
+</div>
+</div>
+
+</body>
+</html>
