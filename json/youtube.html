@@ -1,0 +1,43 @@
+<!-- https://www.youtube.com/watch?v=wbB3lVyUvAM -->
+<html>
+<head>
+<script type="text/javascript">
+var obj1 = {user:"John",age:22,country:"United States"};
+var obj2 = {user:"Noel",age:42,country:"New Zealand"};
+var obj3 = {user:"Gail",age:30,country:"South Korea"};
+var obj4 = {u1:obj1,u2:obj2,u3:obj3};
+</script>
+</head>
+<body>
+<script type="text/javascript">
+//simple example
+document.write(obj1.user);
+document.write("<hr>");
+//with some strings
+document.write(obj1.user + " is "+ obj1.age + " yrs old and lives in " + obj1.country );
+document.write("<hr>");
+//assigning value
+obj1.country = "Philippines";
+document.write(obj1.user + " is "+ obj1.age + " yrs old and lives in " + obj1.country );
+document.write("<hr>");
+
+//calling from a nested array
+document.write(obj4.u2.country);
+document.write("<hr>");
+
+//another way .. (array type)
+document.write(obj4["u2"]["country"]);
+document.write("<hr>");
+
+//ARRAYS
+var meats = ["beef","pork","lamb"];
+var fruit = ["apple","plumb","grape","orange"];
+
+var obj5 = {arr1:meats, arr2:fruit};
+document.write(obj5.arr1[1]);
+document.write("<hr>");
+document.write(obj5.arr1[1] + " and " + obj5.arr2[0] + " for dinner.");
+
+</script>
+</body>
+</html>
